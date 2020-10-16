@@ -15,6 +15,10 @@ body {
     width: 100vw;
     height: 51vh; 
 }
+#summary {
+    background-image: url(../images/landing-page.jpg);
+    background-repeat: no-repeat;
+}
 header {
     height: var(--nav-height);
     position: fixed;
@@ -86,7 +90,7 @@ section {
     padding-top: var(--nav-height);
 }
 @media only screen and (max-width: 500px) {
-    .hidden {
+    #menu.hidden {
         background-color: var(--nav-hover-color);
         width: 0;
         height: 100vh;
