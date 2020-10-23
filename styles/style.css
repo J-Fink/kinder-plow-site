@@ -169,6 +169,9 @@ section {
         width: 100vw;
         visibility: visible;
     }
+    #menu {
+        visibility: hidden;
+    }
     .expand {
         display: flex;
         flex-direction: column;
