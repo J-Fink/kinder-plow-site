@@ -3,6 +3,21 @@
     --nav-color: rgba(255, 255, 255, 1);
     --nav-height: 7.5vh;
     --line-height: 6.5vh;
+    --snowflake: url(../images/snowflakes/snowflake1.png);
+}
+@keyframes snowflake1 {
+    0% {
+        margin-left: 0;
+        transform: rotateY(0deg);
+    }
+    50% {
+        margin-left: 0;
+        transform: rotateY(70deg);
+    }
+    100% {
+        margin-left: 0;
+        transform: rotateY(0deg);
+    }
 }
 body {
     overflow-x: hidden;
@@ -18,6 +33,15 @@ body {
 #summary {
     background-image: url(../images/landing-page.jpg);
     background-repeat: no-repeat;
+}
+.snowflake {
+    margin-top: 50px;
+    width: 60px;
+    height: 60px;
+    background-image: var(--snowflake);
+    background-repeat: no-repeat;
+    animation-name: snowflake1;
+    animation-duration: 4s;
 }
 header {
     height: var(--nav-height);
