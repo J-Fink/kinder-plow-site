@@ -1,4 +1,5 @@
 Kinder Plow
+View live site here https://j-fink.github.io/kinder-plow-site/ 
 * there it is
 * Item 1
 * Font ideas
