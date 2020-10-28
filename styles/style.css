@@ -78,10 +78,6 @@ nav.scrolled {
     overflow: hidden;
 
 }
-
-
-
-
 .flex-container {
     display: flex;
     width: 100vw;
@@ -148,9 +144,11 @@ section {
     .bar-container {
         position: fixed;
         display: block;
+        top: 0;
+        left: 10vw;
         width: 30px;
         height: 30px;
-        margin-top: 9vh;
+        margin-top: 5vh;
         margin-bottom: 17px;
         margin-right: 20vw;
         background: none;
