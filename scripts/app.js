@@ -8,13 +8,46 @@ let bioLink = document.querySelector('.bio-link')
 let faqsLink = document.querySelector('.faqs-link')
 let purchaseLink = document.querySelector('.purchase-link')
 
+if (matchMedia) {
+    const mediaQueryMaxWidth = window.matchMedia('(max-width: 500px)');
+    mediaQueryMaxWidth.addEventListener('change', widthChange);
+    widthChange(mediaQueryMaxWidth);
+} else {
+    const mediaQueryMaxWidth = window.matchMedia('(max-width: 500px)');
+    mediaQueryMaxWidth.addEventListener('change', widthChange);
+}
+function widthChange(mediaQueryMaxWidth) {
+    if (mediaQueryMaxWidth.matches) {
+        mobileDisplay();
+    } else {
+        desktopDisplay();
+    }
+}
+// }
+// if(mediaQueryMaxWidth.matches){//check to see if my media query matches
+//     mobileDisplay();//if it does match the display is 500px or less, it set
+// } else {
+//     return;
+// }
 
-bar.addEventListener('click', openNav);
-historyLink.addEventListener('click', showHistory);
-bioLink.addEventListener('click', showBio);
-faqsLink.addEventListener('click', showFaqs);
-purchaseLink.addEventListener('click', showStore);
+function mobileDisplay() {
+    bar.addEventListener('click', openNav);
+    historyLink.addEventListener('click', showHistory);
+    bioLink.addEventListener('click', showBio);
+    faqsLink.addEventListener('click', showFaqs);
+    purchaseLink.addEventListener('click', showStore);
+    bar.addEventListener('click', openNav);
+}
+function desktopDisplay () {
+    bar.removeEventListener('click', openNav);
+    historyLink.removeEventListener('click', showHistory);
+    bioLink.removeEventListener('click', showBio);
+    faqsLink.removeEventListener('click', showFaqs);
+    purchaseLink.removeEventListener('click', showStore);
+    bar.removeEventListener('click', openNav);
+    document.getElementById('mobileNav').style.width = '100%';
 
+}
 document.addEventListener('scroll', scrollTest);
 function scrollTest(){
     if (scrollY > 0) {
@@ -44,10 +77,6 @@ function closeNav() {
 // new functionality for open close menue full screen
 
 // document.querySelector('.openBtn').addEventListener('click', openNav);
-bar.addEventListener('click', openNav);
-
-// let x = window.matchMedia('(max-width: 500px)');
-
 // function removeHiddenClass() {
 //     dropdownMenu.classList.remove('hidden');
 // }
@@ -79,19 +108,3 @@ function showFaqs(){
 function showStore(){
     closeNav();
     }
-
-// function hideMenu() {
-//     bar.classList.remove('change');
-//     dropdownMenu.classList.remove('expand');
-//     bar.removeEventListener('click', closeNav);
-//     bar.addEventListener('click', openNav);
-//     }
-// function myFunction(x) {
-//     if (x.matches) {
-//         addHiddenClass();
-//         console.log('hidden class added');
-//     } else {
-//         removeHiddenClass();
-//         console.log('hidden class removed');
-//     }}
-// myFunction(x);
