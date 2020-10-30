@@ -154,7 +154,7 @@ section {
         margin-right: 20vw;
         background: none;
         cursor: pointer;
-        z-index: 2;
+        z-index: 3;
     }
     .bar-container div {
         display: block;
