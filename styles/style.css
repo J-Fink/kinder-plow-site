@@ -68,7 +68,8 @@ nav {
     height: var(--nav-height);
 }
 nav.scrolled {
-    background-color: var(--nav-color);
+    background: rgb(255, 255, 255); /*fallback color*/
+    background: var(--nav-color);
 }
 .iframe-container {
     text-align: center;
@@ -100,7 +101,8 @@ section {
         z-index: 1; /*sit on top*/
         left: 0;
         top: 0;
-        background-color: var(--nav-hover-color);
+        background:rgb(255,253,208); /*fallback color*/
+        background: var(--nav-hover-color);
         /* background-color: rgba(0,0,0, 0.9); */
         overflow-x: hidden; /*Disable horizontal scroll*/
         transition: 1.5s /*0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
