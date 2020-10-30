@@ -7,13 +7,12 @@ let historyLink = document.querySelector('.history-link')
 let bioLink = document.querySelector('.bio-link')
 let faqsLink = document.querySelector('.faqs-link')
 let purchaseLink = document.querySelector('.purchase-link')
+let mediaQueryMaxWidth = window.matchMedia('(max-width: 500px)');
 
 if (matchMedia) {
-    const mediaQueryMaxWidth = window.matchMedia('(max-width: 500px)');
     mediaQueryMaxWidth.addEventListener('change', widthChange);
     widthChange(mediaQueryMaxWidth);
 } else {
-    const mediaQueryMaxWidth = window.matchMedia('(max-width: 500px)');
     mediaQueryMaxWidth.addEventListener('change', widthChange);
 }
 function widthChange(mediaQueryMaxWidth) {
@@ -31,6 +30,8 @@ function widthChange(mediaQueryMaxWidth) {
 // }
 
 function mobileDisplay() {
+    console.log('mobileDisplay called');
+    document.getElementById('mobileNav').style.width = '0%';
     bar.addEventListener('click', openNav);
     historyLink.addEventListener('click', showHistory);
     bioLink.addEventListener('click', showBio);
@@ -39,6 +40,7 @@ function mobileDisplay() {
     bar.addEventListener('click', openNav);
 }
 function desktopDisplay () {
+    console.log('desktopDisplay called');
     bar.removeEventListener('click', openNav);
     historyLink.removeEventListener('click', showHistory);
     bioLink.removeEventListener('click', showBio);
@@ -59,6 +61,7 @@ function scrollTest(){
 }
 
 function openNav() {
+    console.log('openNav has been called');
     document.getElementById('mobileNav').style.width = '100%';
     bar.classList.add('change');
     bar.classList.add('closeBtn');
@@ -67,6 +70,7 @@ function openNav() {
     bar.addEventListener('click', closeNav);
 }
 function closeNav() {
+    console.log('closeNav has been called');
     document.getElementById('mobileNav').style.width = '0%';
     bar.classList.remove('change');
     bar.classList.add('openBtn');
