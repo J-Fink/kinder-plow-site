@@ -84,13 +84,16 @@ nav.scrolled {
     width: 100vw;
     flex-direction: row-reverse;
     justify-content: space-between;
+
+
+    
 }
 #history {
     height: 100vh;
-}
-section {
-    font-family: 'Dosis', sans-serif;
-    height: 100vh;
+} 
+section { 
+    font-family: 'Dos is', sans-serif;
+    height: 100vh; 
     padding-top: var(--nav-height);
 }
 @media only screen and (max-width: 500px) {
